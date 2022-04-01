@@ -36,19 +36,19 @@ public class Main {
         studenti.add(s12);
 
         int k;
-        for(Student s :studenti){
-            k=Math.round(s.getGrade());
+        for(Student a :studenti){
+            k=Math.round(a.getGrade());
             if(!gradeMap.containsKey(k)){
                 gradeMap.put(k,new TreeSet<>());
 
             }
-            gradeMap.get(k).add(s);
+            gradeMap.get(k).add(a);
         }
         for(Map.Entry<Integer, TreeSet<Student>> m:gradeMap.entrySet()){
             System.out.println("-------------------------------------------");
             System.out.print(m.getKey()+"\t");
-            for(Student s:m.getValue()){
-                System.out.println("\t"+s);
+            for(Student a:m.getValue()){
+                System.out.println("\t"+a);
             }
         }
 
